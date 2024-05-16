@@ -1,0 +1,69 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  background-color: $background-color;
+  min-height: 100%;
+  height: 100%;
+  overflow-x: hidden !important;
+  overflow: hidden;
+  font-family: "Inter";
+
+  @include maxScreen($breakpoint-lg-2) {
+    overflow-y: auto !important;
+  }
+}
+.mainHeader {
+  height: fit-content;
+}
+.mainSection {
+  margin-left: calc($navbar-width + $padding-md-2);
+  margin-right: $padding-md-2;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  @include maxScreen($breakpoint-lg-2) {
+    height: auto;
+  }
+  @include maxScreen($breakpoint-lg-4) {
+    margin-left: 15px;
+  }
+  @include maxScreen($breakpoint-md-2 + 1) {
+    margin-left: $link-padding-mobile-2;
+  }
+}
+#root {
+  height: 100%;
+  @include maxScreen($breakpoint-lg) {
+    overflow-y: auto;
+  }
+  @include maxScreen($breakpoint-sm) {
+    ::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+.app-container {
+  height: 100%;
+}
+
+.mainContent {
+  width: 100%;
+  transition: 300ms ease-in-out;
+  position: relative;
+}
+.mainContent--expanded {
+  margin-left: -4rem;
+}
+
+@media screen and (max-width: 991px) {
+  .mainContainer {
+    margin-left: 0;
+  }
+  .mainContent {
+    margin-left: 0;
+  }
+  .mainContent--expanded {
+    margin-left: 0;
+  }
+}

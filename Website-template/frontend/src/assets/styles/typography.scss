@@ -1,0 +1,107 @@
+@mixin title-pages {
+  font-family: $satoshi-font-family;
+  font-weight: 900;
+  line-height: 125%; // 60px
+  @include smoothValue(
+    "font-size",
+    40px,
+    60px,
+    $breakpoint-xs,
+    $breakpoint-lg-3
+  );
+  @include smoothValue(
+    "line-height",
+    106.5%,
+    125%,
+    $breakpoint-xs,
+    $breakpoint-lg-3
+  );
+  @include maxScreen($breakpoint-md-4) {
+    line-height: 106.5%;
+    margin-bottom: 17px;
+  }
+}
+
+@mixin subtitle-pages {
+  font-family: $satoshi-font-family;
+  font-weight: 900;
+  line-height: 125%;
+  @include smoothValue(
+    "font-size",
+    36px,
+    60px,
+    $breakpoint-xs,
+    $breakpoint-lg-3
+  );
+  @include smoothValue(
+    "line-height",
+    107%,
+    125%,
+    $breakpoint-xs,
+    $breakpoint-lg-3
+  );
+  @include maxScreen($breakpoint-md-4) {
+    line-height: 107%;
+    margin-bottom: 17px;
+  }
+}
+
+@mixin section-title {
+  font-family: $satoshi-font-family;
+  font-weight: 700;
+  line-height: 135%;
+  @include smoothValue(
+    "font-size",
+    36px,
+    48px,
+    $breakpoint-xs,
+    $breakpoint-lg-3
+  );
+  @include smoothValue(
+    "line-height",
+    106%,
+    135%,
+    $breakpoint-xs,
+    $breakpoint-lg-3
+  );
+
+  @include maxScreen($breakpoint-md-4) {
+    line-height: 106%;
+    margin-bottom: 17px !important;
+  }
+}
+
+@mixin text-t1 {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@mixin text-t2 {
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@mixin text-t3 {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@mixin text-t4 {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+@mixin text-t5 {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 18px;
+}
