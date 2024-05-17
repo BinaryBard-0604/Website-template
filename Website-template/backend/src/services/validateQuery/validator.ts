@@ -12,7 +12,7 @@ export async function validateUserId(
   );
 
   if (userResult.rows.length === 0) {
-    throw new ValidationError(`User with ID ${user_id} not found`);
+    throw new ValidationError(`User with ID ${user_id} not found!`);
   }
 
   return Promise.resolve(true);
